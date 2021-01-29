@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1 #119.29.118.44
+    port: 6379
+    password: 12345
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://localhost:3306/bos?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  global-config:
+    banner: false
+
+
+logging:
+  level:
+    com:
+      example:
+        mapper: debug
